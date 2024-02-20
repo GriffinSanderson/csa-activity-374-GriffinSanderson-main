@@ -1,0 +1,126 @@
+1. Purpose: Number of 0s in the list
+
+Convert: 
+int x = 0;
+for (Integer a : arrList)
+{
+    if (a == 0 )
+        x++;
+}
+return x;
+
+2. Purpose: Find Min
+
+Convert: 
+int y = arrList.get(0);
+for (int j = 1; j arrList.size(); j++)
+{
+    if(arrList.get(j) < y)
+        y = arrList.get(j);
+}
+return y;
+
+3. Purpose: Find ave
+
+Convert:
+double y = 0;
+for (Double a : arrList)
+    y += a;
+return y / arrList.size();
+
+4. Purpose: Is there a 0 in the list
+
+Convert:
+int x = 0;
+boolean b = false;
+while(!b && (x < arrList.size()))
+{
+    if(arrList.get(x) == 0)
+        b = true;
+    x++;
+}
+return b;
+
+5. Purpose:  First half of the list when reversed
+
+Convert:
+for(int j = 0; j < arrList.size() / 2; j++)
+{
+    int a = arrList.get(j);
+    arrList.set(j, arrList.get(arrList.size() - j - 1));
+    arrList.set( arrList.size() - j - 1, a);
+}
+return arrList;
+
+6. Purpose: Add all nums in list
+
+Convert:
+int x = 0;
+for(int n = 0; n < arrList.size(); n++)
+    x += arrList.get(n)
+return x;
+
+7. Purpose: find the mode
+
+Convert:
+int x = 0;
+int y = 0;
+ArrayList<Integer> z = new ArrayList<Integer>();
+for(int a : arrList)
+{
+    z.set(a, (z.get(a) + 1))
+    if(z.get(a) > x)
+    {
+        x = z.get(a);
+        y = a;
+    }
+}
+return y;
+
+8. Purpose: Flips even indexs to odds and vice versa
+
+Convert:
+for(int i = 0; i < arrList.size() - 1; i += 2)
+{
+    int a = arrList.get(i);
+    arrList.set(i, arrList.get(i+1));
+    arrList.set(i+1, arrList.get(i));
+}
+return arrList;
+
+9. Purpose: Finds if theres any negetive values
+
+Convert:
+boolean b = true;
+for(int a : arrList)
+{
+    if(a<=0)
+    {
+        b = false;
+    }
+}
+return b;
+
+10. Purpose: Rotates the last value in the list to the front and shift everthing else up
+
+Convert:
+for(int k = arrList.size(); k > 1; k--)
+{
+    int a = arrList.get(k - 2);
+    arrList.set(k-2, k-1);
+    arrList.set(k-1, a);
+}
+return arrList;
+
+11. Purpose: Find max
+
+Convert:
+int n = arrList.get(0)
+for(int i = 1; i < arrList.size(); i++)
+{
+    if(arrList.get(i) > n)
+    {
+        n = arrList.get(i);
+    }
+}
+return n;
